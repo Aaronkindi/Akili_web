@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+/*hero */
+.Hero {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    /* The dark overlay */ url("assets/services.jpg"); /* The actual image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Layout using flexbox */
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 35px;
+}
+
+.navcenter {
+  display: flex;
+  gap: 30px;
+}
+
+/* Link order */
+.navcenter a:nth-child(1) {
+  order: 1;
+}
+.navcenter a:nth-child(2) {
+  order: 2;
+}
+.navcenter a:nth-child(3) {
+  order: 3;
+}
+.navcenter a:nth-child(4) {
+  order: 4;
+}
+
+.navcenter a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.navcenter a:hover {
+  color: #35b1ff;
+  transition: 0.1s;
+}
+
+/* NAVBAR BUTTON */
+.get-in {
+  padding: 10px 25px;
+  border: none;
+  background-color: #35b1ff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.get-in:hover {
+  background-color: white;
+  color: #35b1ff;
+  transition: 0.5s;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/*Hero content */
+.hero-content {
+  display: flex;
+  margin-left: 130px;
+  margin-top: 90px;
+  align-items: center;
+}
+.main-text h2 {
+  color: white;
+  font-size: 60px;
+  font-weight: 700;
+  margin-top: 0;
+}
+.blue {
+  color: #35b1ff;
+}
+.subhead {
+  color: #35b1ff;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
