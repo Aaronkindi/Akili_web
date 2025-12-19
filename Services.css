@@ -333,3 +333,12 @@ body {
     gap: 40px;
   }
 }
+.fade-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+.fade-on-scroll.show {
+  opacity: 1;
+  transform: translateY(0);
+}

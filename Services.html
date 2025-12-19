@@ -43,7 +43,7 @@
     </section>
     <section class="services">
       <div class="service-content">
-        <div class="service1">
+        <div class="service1 fade-on-scroll">
           <h3>01.</h3>
           <h2>Web design</h2>
           <p>
@@ -58,7 +58,7 @@
       </div>
       <div class="service-content">
         <div class="service-image"></div>
-        <div class="service1">
+        <div class="service1 fade-on-scroll">
           <h3>02.</h3>
           <h2>UI/UX</h2>
           <p>
@@ -71,7 +71,7 @@
         </div>
       </div>
       <div class="service-content">
-        <div class="service1">
+        <div class="service1 fade-on-scroll">
           <h3>03.</h3>
           <h2>Web development</h2>
           <p>
@@ -86,7 +86,7 @@
       </div>
       <div class="service-content">
         <div class="service-image2"></div>
-        <div class="service1">
+        <div class="service1 fade-on-scroll">
           <h3>04.</h3>
           <h2>Website maintenance</h2>
           <p>
@@ -174,3 +174,16 @@
     </div>
   </footer>
 </html>
+<script>
+  const elements = document.querySelectorAll(".fade-on-scroll");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+
+  elements.forEach((el) => observer.observe(el));
+</script>
