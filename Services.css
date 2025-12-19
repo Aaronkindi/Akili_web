@@ -44,16 +44,25 @@ body {
 .navcenter a:nth-child(4) {
   order: 4;
 }
-
-.navcenter a {
-  text-decoration: none;
+.navbar a {
   color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navcenter a.active {
+  color: #35b1ff;
   font-weight: 600;
 }
 
-.navcenter a:hover {
-  color: #35b1ff;
-  transition: 0.1s;
+.navcenter a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background-color: #35b1ff;
 }
 
 /* NAVBAR BUTTON */
