@@ -55,16 +55,6 @@ body {
   font-weight: 600;
 }
 
-.navcenter a.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 100%;
-  height: 2px;
-  background-color: #35b1ff;
-}
-
 /* NAVBAR BUTTON */
 .get-in {
   padding: 10px 25px;
@@ -345,7 +335,7 @@ body {
 .fade-on-scroll {
   opacity: 0;
   transform: translateY(20px);
-  transition: all 0.8s ease;
+  transition: all 1s ease;
 }
 .fade-on-scroll.show {
   opacity: 1;
