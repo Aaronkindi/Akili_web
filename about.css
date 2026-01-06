@@ -1,0 +1,270 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/*Hero */
+.Hero {
+  height: 80vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    /* The dark overlay */ url("assets/team.jpg"); /* The actual image */
+  /* Layout using flexbox */
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 35px;
+}
+
+.navcenter {
+  display: flex;
+  gap: 30px;
+}
+
+/* Link order */
+.navcenter a:nth-child(1) {
+  order: 1;
+}
+.navcenter a:nth-child(2) {
+  order: 2;
+}
+.navcenter a:nth-child(3) {
+  order: 3;
+}
+.navcenter a:nth-child(4) {
+  order: 4;
+}
+.navbar a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navcenter a.active {
+  color: #35b1ff;
+  font-weight: 600;
+}
+
+/* NAVBAR BUTTON */
+.get-in {
+  padding: 10px 25px;
+  border: none;
+  background-color: #35b1ff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.get-in:hover {
+  background-color: white;
+  color: #35b1ff;
+  transition: 0.5s;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+}
+/*Hero */
+.hero-content {
+  display: flex;
+  margin-left: 130px;
+  margin-top: 90px;
+  align-items: center;
+}
+.main-text h1 {
+  color: white;
+  font-size: 90px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.main-text p {
+  color: rgb(197, 193, 193);
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: -50px;
+}
+.blue {
+  color: #35b1ff;
+}
+.subhead {
+  color: #35b1ff;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/*Header */
+.header {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* stack h1 and p */
+  align-items: center; /* horizontal centering */
+  justify-content: center; /* vertical centering */
+  text-align: center; /* center text */
+}
+.header h1 {
+  font-size: 45px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.header p {
+  margin-top: -10px;
+}
+.about-btn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 2px solid #35b1ff;
+  background-color: white;
+  cursor: pointer;
+  transition: ease 0.5s;
+}
+
+.about-btn:hover {
+  color: white;
+  background-color: #35b1ff;
+}
+
+/* mission statement */
+.mission {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  padding: 120px 8%;
+  background: linear-gradient(to bottom, #f9fafb, #ffffff);
+}
+
+/* LEFT SIDE */
+.mission-left {
+  position: relative;
+}
+
+.mission-left h2 {
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* subtle accent line */
+.mission-accent {
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #2563eb; /* your blue */
+  margin-top: 24px;
+  border-radius: 2px;
+}
+
+/* RIGHT SIDE */
+.mission-right {
+  max-width: 520px;
+}
+
+.mission-right p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #4b5563;
+  margin-bottom: 32px;
+}
+
+/* Optional emphasis */
+.mission-right p:last-child {
+  font-weight: 500;
+  color: #111827;
+}
+/*footer */
+.footer {
+  background: #374151;
+  color: #e5e7eb;
+  padding: 60px 20px 20px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+}
+
+/* Brand */
+.footer-brand h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #35b1ff;
+}
+
+.footer-brand p {
+  color: #9ca3af;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+/* Links */
+.footer-links h4 {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+/* Bottom */
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+.fade-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+.fade-on-scroll.show {
+  opacity: 1;
+  transform: translateY(0);
+}
