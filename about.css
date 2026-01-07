@@ -167,7 +167,7 @@ body {
   display: block;
   width: 60px;
   height: 4px;
-  background: #2563eb; /* your blue */
+  background: #35b1ff; /* your blue */
   margin-top: 24px;
   border-radius: 2px;
 }
@@ -188,6 +188,129 @@ body {
 .mission-right p:last-child {
   font-weight: 500;
   color: #111827;
+}
+/*what we do */
+/* WHAT WE DO */
+.what-we-do {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  padding: 120px 8%;
+  background: linear-gradient(to bottom, #f9fafb, #ffffff);
+  overflow: hidden;
+}
+
+/* SECTION EYEBROW */
+.section-eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #35b1ff;
+}
+
+/* IMAGE SIDE */
+.wedo-left {
+  position: relative;
+  min-height: 460px;
+  background: url("assets/wedo.jpg") center / cover no-repeat;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+}
+
+/* image overlay */
+.wedo-left::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.06));
+}
+
+/* TEXT SIDE */
+.wedo-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 540px;
+}
+
+.wedo-right h2 {
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.wedo-right p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+/* ENSURE CONTENT SITS ABOVE BLOBS */
+.wedo-left,
+.wedo-right {
+  position: relative;
+  z-index: 2;
+}
+
+/* BLOBS */
+.blob {
+  position: absolute;
+  width: 460px;
+  height: 460px;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 1;
+  animation: floatBlob 22s ease-in-out infinite;
+}
+
+/* PRIMARY BLUE BLOB */
+.blob-blue {
+  background: #2563eb;
+  top: 5%;
+  left: -180px;
+}
+
+/* SECONDARY ACCENT BLOB (optional but recommended) */
+.blob-cyan {
+  background: #35b1ff;
+  bottom: -200px;
+  right: -140px;
+  animation-delay: -8s;
+}
+
+/* FLOATING MOTION */
+@keyframes floatBlob {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(40px, 30px) scale(1.05);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+/*achievement */
+.achievement {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+  height: 40vh;
+}
+.av-card {
+  background: #ffffff;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 /*footer */
 .footer {
