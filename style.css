@@ -292,6 +292,49 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 40px;
 }
+.serv-container,
+.service-card,
+.service-icon {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.blob {
+  position: absolute;
+  width: 460px;
+  height: 460px;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 1;
+  animation: floatBlob 22s ease-in-out infinite;
+}
+.blob-blue {
+  background: orange;
+  top: 5%;
+  left: -180px;
+}
+
+/* SECONDARY ACCENT BLOB (optional but recommended) */
+.blob-cyan {
+  background: #35b1ff;
+  bottom: -200px;
+  right: -140px;
+  animation-delay: -8s;
+}
+/* FLOATING MOTION */
+@keyframes floatBlob {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(40px, 30px) scale(1.05);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
 
 /* Service card styling */
 .service-card {

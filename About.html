@@ -53,7 +53,7 @@
       </p>
       <button class="about-btn">Contact us</button>
     </section>
-    <section class="mission">
+    <section class="mission fade-on-scroll">
       <div class="mission-left">
         <h2>Our story</h2>
         <span class="mission-accent"></span>
@@ -73,7 +73,7 @@
         </p>
       </div>
     </section>
-    <section class="what-we-do">
+    <section class="what-we-do fade-on-scroll">
       <div class="blob blob-blue"></div>
       <div class="blob blob-cyan"></div>
       <div class="wedo-left"></div>
@@ -89,25 +89,47 @@
         </p>
       </div>
     </section>
-    <section class="achievement">
+    <section class="achievement fade-on-scroll">
+      <div class="achievement-bg"></div>
+
       <div class="av-card">
-        <h3>Dedicated developers</h3>
+        <span class="av-index">01</span>
+        <h3>Dedicated Developers</h3>
         <p>
-          We boast a group of developers, ready to turn your ideas into reality
+          A focused team of experienced developers ready to turn your ideas into
+          reliable, scalable products.
         </p>
       </div>
-      <div class="av-card">
+
+      <div class="av-card featured">
+        <span class="av-index">02</span>
         <h3>Design That Listens</h3>
         <p>
-          You’re involved at every step — because you know your vision best.
+          You’re involved at every step — because no one understands your vision
+          better than you do.
         </p>
       </div>
+
       <div class="av-card">
-        <h3>We do not just build, we upkeep</h3>
+        <span class="av-index">03</span>
+        <h3>We Build & Maintain</h3>
         <p>
-          We understand that your online presence is important to you, so having
-          your site or app always available is our responsibility.
+          From launch to long-term upkeep, we ensure your site or app stays
+          secure, fast, and always available.
         </p>
+      </div>
+    </section>
+    <section class="join-us fade-on-scroll">
+      <div class="join-content">
+        <h1>
+          Ready to create an amazing<br />
+          website for your company?
+        </h1>
+        <p>
+          Our amazing team of designers & developers is ready to help you take
+          your website to the next level. Send us a message today!
+        </p>
+        <button>Get in touch</button>
       </div>
     </section>
   </body>
@@ -140,3 +162,16 @@
     </div>
   </footer>
 </html>
+<script>
+  const elements = document.querySelectorAll(".fade-on-scroll");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+
+  elements.forEach((el) => observer.observe(el));
+</script>
