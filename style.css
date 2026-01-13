@@ -44,6 +44,9 @@ body {
 .navcenter a:nth-child(4) {
   order: 4;
 }
+.navcenter a:nth-child(5) {
+  order: 5;
+}
 
 .navcenter a {
   position: relative;
@@ -92,15 +95,58 @@ body {
   font-size: 24px;
   font-weight: 600;
 }
+/*sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -280px; /* Hidden off-screen to the right */
+  height: 100vh;
+  width: 280px;
+  background-color: #ffffff;
+  z-index: 999;
+  transition: 0.4s ease-in-out; /* This creates the slide effect */
+  display: flex; /* Keep it flex, but hidden by the right: -280px */
+  flex-direction: column;
+  box-shadow: -10px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* When this class is added, the menu slides to the edge of the screen */
+.sidebar.show {
+  right: 0;
+}
+.sidebar .logo {
+  color: #111;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.sidebar .nav-left {
+  margin-bottom: 48px;
+}
+
+.sidebar .navcenter {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+}
+.res-menu {
+  display: none;
+}
 
 /* HERO CONTENT CONTAINER */
 .hero-content {
+  /* Remove the fixed margin-left and use a container approach */
   margin-top: 100px;
-  margin-left: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 5%; /* Use percentage for breathing room */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  max-width: 1200px; /* Limits width on huge screens */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* MAIN TEXT */
@@ -746,11 +792,42 @@ body {
   font-size: 0.85rem;
   color: #9ca3af;
 }
+/*responsive */
+@media (max-width: 1000px) {
+  body,
+  html {
+    overflow-x: hidden;
+  }
+  .navbar {
+    padding: 10px 20px; /* Reduced side padding */
+  }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  .hideOnMobile {
+    display: none;
+  }
+
+  .res-menu {
+    display: flex;
+  }
+
+  .hero-content {
+    margin-top: 60px;
+    margin-left: 0; /* Resetting the desktop margin */
+    align-items: center; /* Center content for better mobile balance */
+    text-align: center;
+  }
+
+  .main-text h1 {
+    font-size: 45px; /* Scaled down from 70px */
+    line-height: 1.2;
+  }
+
+  .tagline {
+    margin-top: 10px; /* Fixed the negative margin issue */
+    font-size: 18px;
+  }
+
+  .quote {
+    margin-top: 20px;
   }
 }

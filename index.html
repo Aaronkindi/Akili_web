@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="style.css" />
+    <link href="main.css" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
@@ -23,15 +25,56 @@
           <p class="logo">Akili.</p>
         </div>
 
-        <div class="navcenter">
+        <div class="navcenter hideOnMobile">
           <a href="index.html" class="active">Home</a>
           <a href="About.html">About</a>
           <a href="Services.html">Services</a>
           <a href="Portfolio.html">Portfolio</a>
+          <a href="#"></a>
         </div>
 
-        <div class="nav-right">
+        <div class="nav-right hideOnMobile">
           <button class="get-in">Get in touch</button>
+        </div>
+        <div class="res-menu" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#FFFFFF"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              /></svg
+          ></a>
+        </div>
+      </nav>
+
+      <!---Sidebar-->
+      <nav class="sidebar">
+        <div class="nav-left">
+          <p class="logo">Akili.</p>
+        </div>
+
+        <div class="navcenter">
+          <a href="#" onclick="hideSidebar()"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#000000"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              /></svg
+          ></a>
+          <a href="index.html" class="active">Home</a>
+          <a href="About.html">About</a>
+          <a href="Services.html">Services</a>
+          <a href="Portfolio.html">Portfolio</a>
         </div>
       </nav>
 
@@ -322,4 +365,12 @@
   });
 
   elements.forEach((el) => observer.observe(el));
+
+  function showSidebar() {
+    document.querySelector(".sidebar").classList.add("show");
+  }
+
+  function hideSidebar() {
+    document.querySelector(".sidebar").classList.remove("show");
+  }
 </script>
