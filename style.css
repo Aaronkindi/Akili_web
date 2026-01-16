@@ -96,24 +96,40 @@ body {
   font-weight: 600;
 }
 /*sidebar */
+/* =========================
+   SIDEBAR CONTAINER
+========================= */
 .sidebar {
   position: fixed;
   top: 0;
-  right: -280px; /* Hidden off-screen to the right */
-  height: 100vh;
+  right: -280px; /* Hidden off-screen */
   width: 280px;
+  height: 100vh;
   background-color: #ffffff;
   z-index: 999;
-  transition: 0.4s ease-in-out; /* This creates the slide effect */
-  display: flex; /* Keep it flex, but hidden by the right: -280px */
+  transition: right 0.4s ease-in-out;
+  display: flex;
   flex-direction: column;
   box-shadow: -10px 0 15px rgba(0, 0, 0, 0.1);
 }
 
-/* When this class is added, the menu slides to the edge of the screen */
+/* Sidebar visible state */
 .sidebar.show {
   right: 0;
 }
+
+/* =========================
+   SIDEBAR HEADER
+========================= */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Logo */
 .sidebar .logo {
   color: #111;
   font-size: 22px;
@@ -121,15 +137,67 @@ body {
   letter-spacing: -0.5px;
 }
 
-.sidebar .nav-left {
-  margin-bottom: 48px;
+/* =========================
+   CLOSE BUTTON
+========================= */
+.close-btn {
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.close-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: #111;
+  transition: transform 0.25s ease;
+}
+
+.close-btn:hover svg {
+  transform: rotate(90deg);
+}
+
+/* =========================
+   NAV LINKS
+========================= */
 .sidebar .navcenter {
   display: flex;
   flex-direction: column;
-  padding: 30px 40px;
+  padding: 32px 24px;
+  gap: 22px;
 }
+
+.sidebar .navcenter a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: #111;
+  transition: color 0.2s ease;
+}
+
+.sidebar .navcenter a:hover {
+  color: #1e6bff;
+}
+
+.sidebar .navcenter a.active {
+  color: #1e6bff;
+  font-weight: 600;
+}
+
+/* =========================
+   OPTIONAL: STICKY HEADER
+========================= */
+.sidebar-header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  z-index: 10;
+}
+
 .res-menu {
   display: none;
 }
@@ -356,11 +424,6 @@ body {
   z-index: 1;
   animation: floatBlob 22s ease-in-out infinite;
 }
-.blob-blue {
-  background: orange;
-  top: 5%;
-  left: -180px;
-}
 
 /* SECONDARY ACCENT BLOB (optional but recommended) */
 .blob-cyan {
@@ -442,6 +505,16 @@ body {
   font-weight: 400;
   margin-top: -40px;
   margin-left: 5px;
+}
+.quote1 {
+  padding: 10px 35px;
+  border: none;
+  background-color: #35b1ff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 /*Portfolio */
@@ -829,5 +902,97 @@ body {
 
   .quote {
     margin-top: 20px;
+  }
+  /*reviews */
+  .review-content {
+    text-align: center;
+  }
+  /*portfolio */
+  .portfolio-grid {
+    text-align: center;
+  }
+  .portfolio-header {
+    text-align: center;
+  }
+
+  /*contact */
+  .contact-content h2,
+  .contact-content p {
+    text-align: center;
+  }
+  .btn-primary {
+    display: block;
+    margin: 0 auto;
+  }
+  .contact-info h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 950px) {
+  /* Stack sections vertically */
+  .about-content {
+    flex-direction: column;
+  }
+
+  /* Full width text */
+  .about-text {
+    width: 100%;
+    margin: auto;
+  }
+  br {
+    display: none;
+  }
+
+  /* Images behave better on mobile */
+  .about-img {
+    width: 100%;
+    height: 50vh;
+    background-attachment: scroll; /* IMPORTANT */
+  }
+
+  .about-img2 {
+    display: none;
+  }
+
+  /* Typography scaling */
+  .about-text h2 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .about-text h5 {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+
+  .para {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  /* Links spacing */
+  .Link {
+    display: flex;
+    justify-content: center;
+  }
+  .about-text h2,
+  .about-text h5,
+  .about-text p,
+  .Link {
+    text-align: center;
+  }
+  /* action*/
+  .action-text {
+    margin: auto;
+  }
+  .action-text h1 {
+    text-align: center;
+  }
+  .action-text p {
+    text-align: center;
+  }
+  .quote1 {
+    display: block;
+    margin: 0 auto;
   }
 }

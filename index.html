@@ -54,23 +54,28 @@
 
       <!---Sidebar-->
       <nav class="sidebar">
-        <div class="nav-left">
+        <div class="sidebar-header">
           <p class="logo">Akili.</p>
-        </div>
 
-        <div class="navcenter">
-          <a href="#" onclick="hideSidebar()"
-            ><svg
+          <button
+            class="close-btn"
+            onclick="hideSidebar()"
+            aria-label="Close menu"
+          >
+            <svg
               xmlns="http://www.w3.org/2000/svg"
-              height="24px"
               viewBox="0 -960 960 960"
-              width="24px"
-              fill="#000000"
+              width="24"
+              height="24"
             >
               <path
                 d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-              /></svg
-          ></a>
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="navcenter">
           <a href="index.html" class="active">Home</a>
           <a href="About.html">About</a>
           <a href="Services.html">Services</a>
@@ -166,7 +171,7 @@
           </p>
         </div>
       </div>
-      <div class="blob blob-blue"></div>
+
       <div class="blob blob-cyan"></div>
     </div>
 
@@ -177,7 +182,7 @@
           with you
         </h1>
         <p>We grow with you — every step of the way.</p>
-        <button class="quote">Get in touch</button>
+        <button class="quote1">Get in touch</button>
       </div>
     </div>
 
