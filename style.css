@@ -445,6 +445,18 @@ p {
   display: flex;
   align-items: flex-end;
 }
+.portfolio-card {
+  background-image: url(assets/peter.jpg);
+  background-size: cover;
+}
+.portfolio-card2 {
+  background-image: url(assets/church.jpg);
+  background-size: cover;
+}
+.portfolio-card3 {
+  background-image: url(assets/real\ estate.jpg);
+  background-size: cover;
+}
 
 .card-content {
   padding: 30px;
