@@ -36,7 +36,7 @@
         <div class="nav-right hideOnMobile">
           <button class="get-in">Get in touch</button>
         </div>
-        <div class="res-menu" onclick="showSidebar()">
+        <div class="res-menu hideOnDesktop" onclick="showSidebar()">
           <a href="#"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@
       </nav>
 
       <!---Sidebar-->
-      <nav class="sidebar">
+      <nav class="sidebar hideOnDesktop">
         <div class="sidebar-header">
           <p class="logo">Akili.</p>
 
@@ -75,7 +75,7 @@
           </button>
         </div>
 
-        <div class="navcenter">
+        <div class="navSide">
           <a href="index.html" class="active">Home</a>
           <a href="About.html">About</a>
           <a href="Services.html">Services</a>
@@ -97,6 +97,7 @@
 
         <button class="quote">Get a free quote</button>
       </div>
+      <div class="blob"></div>
     </div>
     <div class="about-content">
       <div class="about-text fade-on-scroll">
@@ -171,8 +172,6 @@
           </p>
         </div>
       </div>
-
-      <div class="blob blob-cyan"></div>
     </div>
 
     <div class="action">
@@ -357,8 +356,13 @@
       setTimeout(type, 150);
     }
   }
+  const ismobile = window.matchMedia("(max-width: 950px)").matches;
+  if (!ismobile) {
+    type();
+  } else {
+    typing.textContent = words[0];
+  }
 
-  type();
   const elements = document.querySelectorAll(".fade-on-scroll");
 
   const observer = new IntersectionObserver((entries) => {
