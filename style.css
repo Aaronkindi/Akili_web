@@ -51,7 +51,8 @@ html {
 
 body {
   font-family: "Inter", system-ui, sans-serif;
-  background: radial-gradient(1200px 600px at 10% -10%, #1a1f2b, transparent),
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #1a1f2b, transparent),
     radial-gradient(800px 500px at 90% 10%, #14192a, transparent),
     var(--bg-main);
   color: var(--text-main);
@@ -320,7 +321,8 @@ p {
 .about-img2 {
   height: 520px;
   border-radius: var(--radius-lg);
-  background: linear-gradient(
+  background:
+    linear-gradient(
       145deg,
       rgba(77, 163, 255, 0.15),
       rgba(124, 108, 255, 0.15)
@@ -439,7 +441,8 @@ p {
 .portfolio-card3 {
   height: 420px;
   border-radius: var(--radius-lg);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent),
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent),
     var(--bg-card);
   box-shadow: var(--shadow-soft);
   display: flex;
@@ -448,18 +451,27 @@ p {
 .portfolio-card {
   background-image: url(assets/peter.jpg);
   background-size: cover;
+  background-position: center;
 }
 .portfolio-card2 {
   background-image: url(assets/church.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .portfolio-card3 {
   background-image: url(assets/real\ estate.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .card-content {
   padding: 30px;
+}
+.card-content a {
+  color: white;
+  text-decoration: none;
 }
 
 .tag {

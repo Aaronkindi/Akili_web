@@ -1,135 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="about.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>About</title>
+    <title>About Akili</title>
   </head>
+
   <body>
-    <section class="Hero">
+    <!-- HERO -->
+    <section class="hero">
       <nav class="navbar">
-        <div class="nav-left">
+        <p class="logo">Akili.</p>
+        <div class="navcenter hideOnMobile">
+          <a href="index.html">Home</a>
+          <a href="about.html" class="active">About</a>
+          <a href="services.html">Services</a>
+          <a href="portfolio.html">Portfolio</a>
+        </div>
+        <button class="get-in hideOnMobile">Get in touch</button>
+        <div class="res-menu hideOnDesktop" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#FFFFFF"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              /></svg
+          ></a>
+        </div>
+      </nav>
+
+      <!---Sidebar--->
+      <nav class="sidebar">
+        <div class="sidebar-header">
           <p class="logo">Akili.</p>
+
+          <button
+            class="close-btn"
+            onclick="hideSidebar()"
+            aria-label="Close menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 -960 960 960"
+              width="24"
+              height="24"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              />
+            </svg>
+          </button>
         </div>
 
-        <div class="navcenter">
-          <a href="index.html">Home</a>
-          <a href="About.html" class="active">About</a>
+        <div class="navSide">
+          <a href="index.html" class="active">Home</a>
+          <a href="About.html">About</a>
           <a href="Services.html">Services</a>
           <a href="Portfolio.html">Portfolio</a>
         </div>
-
-        <div class="nav-right">
-          <button class="get-in">Get in touch</button>
-        </div>
       </nav>
-      <div class="hero-content">
-        <div class="main-text">
-          <h1>About Akili</h1>
+
+      <div class="hero-inner">
+        <h1>We are <span class="gradient-text">Akili</span></h1>
+        <p>
+          We craft modern digital experiences that help brands grow, connect,
+          and stand out online. We are not just an agency, we are a studio of
+          creatives that build amazing products for startups, companies, and
+          ourselves.
+        </p>
+        <button class="get">View our work</button>
+      </div>
+    </section>
+
+    <!-- OUR STORY (FIXED) -->
+    <section class="story">
+      <div class="story-inner fade-on-scroll">
+        <span class="eyebrow">Our story</span>
+        <h2>Akili started in 2024 as all businesses start. A leap of faith.</h2>
+
+        <p>
+          Since then, we’ve helped businesses launch world-class websites and
+          grow their brands through thoughtful design and reliable development.
+        </p>
+
+        <p>
+          We’re not just an agency — we’re a studio of creatives building
+          meaningful digital products for startups, companies, and ourselves.
+        </p>
+        <button class="quote">Contact Us</button>
+      </div>
+    </section>
+
+    <!-- WHAT WE DO (NO IMAGE, BETTER LAYOUT) -->
+    <section class="what">
+      <div class="what-inner fade-on-scroll">
+        <div class="what-left">
+          <span class="eyebrow wedo">What we do</span>
+          <h2 class="stacked">
+            <span>Design.</span>
+            <span class="highlight">Build.</span>
+            <span>Grow.</span>
+          </h2>
+        </div>
+
+        <div class="what-right">
           <p>
-            We craft modern digital experiences that help brands grow,<br />
-            connect, and stand out online.
+            We offer premium, quality-focused web design services covering the
+            entire lifecycle of your digital presence — from UX/UI design and
+            development to e-commerce solutions and branding.
           </p>
         </div>
       </div>
     </section>
-    <section class="header">
-      <h1>
-        We build digital products<br />
-        that help<span class="blue"> businesses</span>
-        grow
-      </h1>
-      <p>
-        Design-driven websites and applications crafted for performance,
-        clarity, and real-world impact.
-      </p>
-      <button class="about-btn">Contact us</button>
-    </section>
-    <section class="mission fade-on-scroll">
-      <div class="mission-left">
-        <h2>Our story</h2>
-        <span class="mission-accent"></span>
-      </div>
 
-      <div class="mission-right">
-        <p>
-          Akili grew out of an idea by 2 university students in 2024, trying to
-          help small businesses compete in an increasingly fast-paced and
-          digital world.Since then we have helped a handful of small businesses
-          launch world-class websites and grow their brands further.
-        </p>
+    <!-- VALUES / CARDS -->
+    <div class="values-outer fade-on-scroll">
+      <p class="eyebrow">Who we are</p>
+      <div class="values">
+        <div class="card">
+          <span>01</span>
+          <h3>Dedicated Developers</h3>
+          <p>
+            Experienced developers turning your ideas into scalable products.
+          </p>
+        </div>
 
-        <p>
-          We are not just an agency — we are a studio of creatives building
-          meaningful digital products for startups, companies, and ourselves.
-        </p>
-      </div>
-    </section>
-    <section class="what-we-do">
-      <div class="blob blob-blue"></div>
-      <div class="blob blob-cyan"></div>
-      <div class="wedo-left"></div>
-      <div class="wedo-right fade-on-scroll">
-        <h2>What we do</h2>
-        <span class="section-eyebrow">Our services</span>
-        <p>
-          We offer premium, quality-focused web design services in Johannesburg,
-          covering the entire lifecycle of your digital presence. Our expertise
-          includes bespoke UX/UI development and website creation, robust
-          e-commerce solutions (WooCommerce/Shopify), and
-          strategic branding services.
-        </p>
-      </div>
-    </section>
-    <section class="achievement">
-      <div class="achievement-bg fade-on-scroll"></div>
+        <div class="card featured">
+          <span>02</span>
+          <h3>Design That Listens</h3>
+          <p>You’re involved at every step — your vision drives the process.</p>
+        </div>
 
-      <div class="av-card">
-        <span class="av-index">01</span>
-        <h3>Dedicated Developers</h3>
-        <p>
-          A focused team of experienced developers ready to turn your ideas into
-          reliable, scalable products.
-        </p>
+        <div class="card">
+          <span>03</span>
+          <h3>We Build & Maintain</h3>
+          <p>
+            From launch to long-term support, we keep your site fast and secure.
+          </p>
+        </div>
       </div>
-
-      <div class="av-card featured">
-        <span class="av-index">02</span>
-        <h3>Design That Listens</h3>
-        <p>
-          You’re involved at every step — because no one understands your vision
-          better than you do.
-        </p>
-      </div>
-
-      <div class="av-card">
-        <span class="av-index">03</span>
-        <h3>We Build & Maintain</h3>
-        <p>
-          From launch to long-term upkeep, we ensure your site or app stays
-          secure, fast, and always available.
-        </p>
-      </div>
-    </section>
-    <section class="join-us">
-      <div class="join-content fade-on-scroll">
-        <h1>
-          Ready to create an amazing<br />
-          website for your company?
-        </h1>
+    </div>
+    <section class="CTA">
+      <div class="head fade-on-scroll">
+        <h2>Ready to create an amazing website for your company?</h2>
         <p>
           Our amazing team of designers & developers is ready to help you take
           your website to the next level. Send us a message today!
         </p>
-        <button>Get in touch</button>
+        <button class="join">Join Us</button>
       </div>
     </section>
   </body>
@@ -174,4 +203,11 @@
   });
 
   elements.forEach((el) => observer.observe(el));
+  function showSidebar() {
+    document.querySelector(".sidebar").classList.add("show");
+  }
+
+  function hideSidebar() {
+    document.querySelector(".sidebar").classList.remove("show");
+  }
 </script>
